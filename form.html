@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+    body {
+      background: rgb(100,100,100);
+      color: white;
+    }
+    h1 {
+      font-family: Arial;
+      text-align: center;
+      padding: 8px;
+      font-size: 20px;
+    }
+    p {
+      font-family: Arial;
+      text-align: left;
+      padding: 10px;
+      font-size: 12px;
+    }
+    form {
+      text-align: left;
+      font-family: "Times New Roman";
+    }
+    #submit {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="title"><strong>Survey of education system</strong></h1>
+
+  <p id="description">
+    <em>This form is to obtain the feedback from the students who are pursuing in ABC college of technology</em>
+  </p>
+
+  <form id="survey-form">
+
+    <label id="name-label" for="name">Name:</label>
+    <input type="text" id="name" name="name" required pattern="[A-Za-z]+" placeholder="Enter your name"><br>
+
+    <label id="email-label" for="email">Email ID:</label>
+    <input type="email" id="email" name="email" required placeholder="Enter your email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+
+    <label id="number-label" for="number">Number:</label>
+    <input type="number" id="number" name="number" required min="1" max="9999999999" placeholder="Enter your number"><br>
+
+    <label for="dropdown">Year of Study</label>
+    <select id="dropdown" name="year">
+      <option value="">--select--</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select><br>
+
+    <p>How are you satisfied with our education system</p>
+    <label for="satisfied">Satisfied</label>
+    <input type="radio" id="satisfied" name="satisfaction" value="satisfied" required><br>
+
+    <label for="unsatisfied">Unsatisfied</label>
+    <input type="radio" id="unsatisfied" name="satisfaction" value="unsatisfied"><br>
+
+    <p>Which is your favourite teaching method</p>
+    <label for="theory">Theory</label>
+    <input type="checkbox" id="theory" name="method" value="theory"><br>
+
+    <label for="practical">Practical</label>
+    <input type="checkbox" id="practical" name="method" value="practical"><br>
+
+    <label for="comments">Additional Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Type any suggestions or feedback here..."></textarea><br><br>
+
+    <button type="submit" id="submit">Submit</button>
+
+  </form>
+
+</body>
+</html>
